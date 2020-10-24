@@ -13,6 +13,10 @@
 		F596D49D2544B9BA0079A51F /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F596D49B2544B9BA0079A51F /* Main.storyboard */; };
 		F596D49F2544B9C00079A51F /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = F596D49E2544B9C00079A51F /* Assets.xcassets */; };
 		F596D4A22544B9C00079A51F /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F596D4A02544B9C00079A51F /* LaunchScreen.storyboard */; };
+		F596D4B32544BE060079A51F /* ShadowCardView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F596D4B02544BE060079A51F /* ShadowCardView.swift */; };
+		F596D4B42544BE060079A51F /* CardView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F596D4B12544BE060079A51F /* CardView.swift */; };
+		F596D4B52544BE060079A51F /* RoundedButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = F596D4B22544BE060079A51F /* RoundedButton.swift */; };
+		F596D4B82544BE770079A51F /* DemoData.swift in Sources */ = {isa = PBXBuildFile; fileRef = F596D4B72544BE770079A51F /* DemoData.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -24,6 +28,10 @@
 		F596D49E2544B9C00079A51F /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		F596D4A12544B9C00079A51F /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		F596D4A32544B9C00079A51F /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		F596D4B02544BE060079A51F /* ShadowCardView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ShadowCardView.swift; sourceTree = "<group>"; };
+		F596D4B12544BE060079A51F /* CardView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CardView.swift; sourceTree = "<group>"; };
+		F596D4B22544BE060079A51F /* RoundedButton.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RoundedButton.swift; sourceTree = "<group>"; };
+		F596D4B72544BE770079A51F /* DemoData.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DemoData.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -56,15 +64,51 @@
 		F596D4942544B9BA0079A51F /* eCommerce App */ = {
 			isa = PBXGroup;
 			children = (
-				F596D4952544B9BA0079A51F /* AppDelegate.swift */,
+				F596D4B72544BE770079A51F /* DemoData.swift */,
+				F596D4AF2544BDEF0079A51F /* Custom Views */,
+				F596D4AE2544BBB60079A51F /* View */,
+				F596D4AD2544BBA20079A51F /* Controller */,
+				F596D4AA2544BAAB0079A51F /* Resources */,
+			);
+			path = "eCommerce App";
+			sourceTree = "<group>";
+		};
+		F596D4AA2544BAAB0079A51F /* Resources */ = {
+			isa = PBXGroup;
+			children = (
 				F596D4972544B9BA0079A51F /* SceneDelegate.swift */,
-				F596D4992544B9BA0079A51F /* ViewController.swift */,
-				F596D49B2544B9BA0079A51F /* Main.storyboard */,
+				F596D4952544B9BA0079A51F /* AppDelegate.swift */,
 				F596D49E2544B9C00079A51F /* Assets.xcassets */,
 				F596D4A02544B9C00079A51F /* LaunchScreen.storyboard */,
 				F596D4A32544B9C00079A51F /* Info.plist */,
 			);
-			path = "eCommerce App";
+			path = Resources;
+			sourceTree = "<group>";
+		};
+		F596D4AD2544BBA20079A51F /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				F596D4992544B9BA0079A51F /* ViewController.swift */,
+			);
+			path = Controller;
+			sourceTree = "<group>";
+		};
+		F596D4AE2544BBB60079A51F /* View */ = {
+			isa = PBXGroup;
+			children = (
+				F596D49B2544B9BA0079A51F /* Main.storyboard */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		F596D4AF2544BDEF0079A51F /* Custom Views */ = {
+			isa = PBXGroup;
+			children = (
+				F596D4B12544BE060079A51F /* CardView.swift */,
+				F596D4B22544BE060079A51F /* RoundedButton.swift */,
+				F596D4B02544BE060079A51F /* ShadowCardView.swift */,
+			);
+			path = "Custom Views";
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -138,8 +182,12 @@
 			buildActionMask = 2147483647;
 			files = (
 				F596D49A2544B9BA0079A51F /* ViewController.swift in Sources */,
+				F596D4B52544BE060079A51F /* RoundedButton.swift in Sources */,
+				F596D4B82544BE770079A51F /* DemoData.swift in Sources */,
 				F596D4962544B9BA0079A51F /* AppDelegate.swift in Sources */,
+				F596D4B32544BE060079A51F /* ShadowCardView.swift in Sources */,
 				F596D4982544B9BA0079A51F /* SceneDelegate.swift in Sources */,
+				F596D4B42544BE060079A51F /* CardView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -288,7 +336,7 @@
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 5882QKM9XK;
-				INFOPLIST_FILE = "eCommerce App/Info.plist";
+				INFOPLIST_FILE = "eCommerce App/Resources/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -307,7 +355,7 @@
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 5882QKM9XK;
-				INFOPLIST_FILE = "eCommerce App/Info.plist";
+				INFOPLIST_FILE = "eCommerce App/Resources/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
