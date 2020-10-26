@@ -11,14 +11,26 @@ class HomeVC: UIViewController {
     
     @IBOutlet weak var tableView:UITableView!
     
+    var vacations = [Vacation]()
 
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        vacations = demoData
+        title = K.titleName
+        setUpTableView()
         
         let loginVC = LoginRegisterVC()
         loginVC.modalPresentationStyle = .fullScreen
         present(loginVC, animated: true)
         
+    }
+    func setUpTableView(){
+        tableView.delegate = self
+        tableView.dataSource = self
+        tableView.tableFooterView = UIView()//pra tirar cel vazias do final
+        tableView.contentInset.top = 8
+        tableView.register(UINib(nibName: K.cellNibName, bundle: nil), forCellReuseIdentifier: K.cellIdentifier)
     }
 
 
@@ -49,3 +61,21 @@ class HomeVC: UIViewController {
     }
 }
 
+extension HomeVC : UITableViewDelegate , UITableViewDataSource{
+    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+     return   vacations.count
+    }
+    
+    func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+        
+        let cell = tableView.dequeueReusableCell(withIdentifier: K.cellIdentifier, for: indexPath)as! VacationCell
+        cell.configureCell(vacation: vacations[indexPath.row])
+        return cell
+    }
+    func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
+        return 220
+        
+    }
+    
+    
+}
