@@ -20,6 +20,8 @@
 		F596D4BD2544C6BC0079A51F /* LoginRegisterVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = F596D4BB2544C6BC0079A51F /* LoginRegisterVC.swift */; };
 		F596D4BE2544C6BC0079A51F /* LoginRegisterVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = F596D4BC2544C6BC0079A51F /* LoginRegisterVC.xib */; };
 		F5A7EF3425474B2B00F0F907 /* Vacation.swift in Sources */ = {isa = PBXBuildFile; fileRef = F5A7EF3325474B2B00F0F907 /* Vacation.swift */; };
+		F5A7EF3925475A7900F0F907 /* VacationCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = F5A7EF3725475A7900F0F907 /* VacationCell.swift */; };
+		F5A7EF3A25475A7900F0F907 /* VacationCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = F5A7EF3825475A7900F0F907 /* VacationCell.xib */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -38,6 +40,8 @@
 		F596D4BB2544C6BC0079A51F /* LoginRegisterVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginRegisterVC.swift; sourceTree = "<group>"; };
 		F596D4BC2544C6BC0079A51F /* LoginRegisterVC.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = LoginRegisterVC.xib; sourceTree = "<group>"; };
 		F5A7EF3325474B2B00F0F907 /* Vacation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Vacation.swift; sourceTree = "<group>"; };
+		F5A7EF3725475A7900F0F907 /* VacationCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VacationCell.swift; sourceTree = "<group>"; };
+		F5A7EF3825475A7900F0F907 /* VacationCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = VacationCell.xib; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -70,6 +74,7 @@
 		F596D4942544B9BA0079A51F /* eCommerce App */ = {
 			isa = PBXGroup;
 			children = (
+				F5A7EF3625475A5100F0F907 /* Cells */,
 				F5A7EF3225474B1000F0F907 /* Models */,
 				F596D4BA2544C6960079A51F /* LoginRegister */,
 				F596D49B2544B9BA0079A51F /* Main.storyboard */,
@@ -118,6 +123,15 @@
 				F5A7EF3325474B2B00F0F907 /* Vacation.swift */,
 			);
 			path = Models;
+			sourceTree = "<group>";
+		};
+		F5A7EF3625475A5100F0F907 /* Cells */ = {
+			isa = PBXGroup;
+			children = (
+				F5A7EF3725475A7900F0F907 /* VacationCell.swift */,
+				F5A7EF3825475A7900F0F907 /* VacationCell.xib */,
+			);
+			path = Cells;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -180,6 +194,7 @@
 				F596D4A22544B9C00079A51F /* LaunchScreen.storyboard in Resources */,
 				F596D49F2544B9C00079A51F /* Assets.xcassets in Resources */,
 				F596D49D2544B9BA0079A51F /* Main.storyboard in Resources */,
+				F5A7EF3A25475A7900F0F907 /* VacationCell.xib in Resources */,
 				F596D4BE2544C6BC0079A51F /* LoginRegisterVC.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -197,6 +212,7 @@
 				F596D4B82544BE770079A51F /* DemoData.swift in Sources */,
 				F596D4962544B9BA0079A51F /* AppDelegate.swift in Sources */,
 				F596D4B32544BE060079A51F /* ShadowCardView.swift in Sources */,
+				F5A7EF3925475A7900F0F907 /* VacationCell.swift in Sources */,
 				F596D4982544B9BA0079A51F /* SceneDelegate.swift in Sources */,
 				F596D4B42544BE060079A51F /* CardView.swift in Sources */,
 				F596D4BD2544C6BC0079A51F /* LoginRegisterVC.swift in Sources */,
