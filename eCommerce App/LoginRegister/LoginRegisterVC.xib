@@ -1,0 +1,262 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="17156" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="17126"/>
+        <capability name="Named colors" minToolsVersion="9.0"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="LoginRegisterVC" customModule="eCommerce_App" customModuleProvider="target">
+            <connections>
+                <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view clearsContextBeforeDrawing="NO" contentMode="scaleToFill" id="i5M-Pr-FkT">
+            <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <imageView clipsSubviews="YES" userInteractionEnabled="NO" alpha="0.75" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="background-beach-filled" translatesAutoresizingMaskIntoConstraints="NO" id="MrS-OM-BeT">
+                    <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                </imageView>
+                <view alpha="0.55000000000000004" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="W4e-ep-I5I" userLabel="Card shadow" customClass="CardView" customModule="eCommerce_App" customModuleProvider="target">
+                    <rect key="frame" x="24" y="166" width="378" height="180"/>
+                    <color key="backgroundColor" name="card_shadow"/>
+                    <userDefinedRuntimeAttributes>
+                        <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                            <real key="value" value="10"/>
+                        </userDefinedRuntimeAttribute>
+                    </userDefinedRuntimeAttributes>
+                </view>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="ydv-v9-kTh" userLabel="Card Login" customClass="CardView" customModule="eCommerce_App" customModuleProvider="target">
+                    <rect key="frame" x="12" y="154" width="378" height="180"/>
+                    <subviews>
+                        <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="top" spacing="12" translatesAutoresizingMaskIntoConstraints="NO" id="XBV-b0-5Jx">
+                            <rect key="frame" x="12" y="12" width="354" height="156"/>
+                            <subviews>
+                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Login" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="4gG-lH-3fi">
+                                    <rect key="frame" x="0.0" y="0.0" width="35.5" height="17"/>
+                                    <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                    <nil key="textColor"/>
+                                    <nil key="highlightedColor"/>
+                                </label>
+                                <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="email" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="117-tJ-AOX">
+                                    <rect key="frame" x="0.0" y="29" width="354" height="34"/>
+                                    <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                    <textInputTraits key="textInputTraits"/>
+                                </textField>
+                                <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="password" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="OH5-X9-f2G">
+                                    <rect key="frame" x="0.0" y="75" width="354" height="34"/>
+                                    <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                    <textInputTraits key="textInputTraits" secureTextEntry="YES"/>
+                                </textField>
+                                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="AuD-kW-STD" customClass="RoundedButton" customModule="eCommerce_App" customModuleProvider="target">
+                                    <rect key="frame" x="0.0" y="121" width="354" height="35"/>
+                                    <color key="backgroundColor" name="btn_light_blue"/>
+                                    <constraints>
+                                        <constraint firstAttribute="height" constant="35" id="l9a-NO-ES7"/>
+                                    </constraints>
+                                    <state key="normal" title="Login">
+                                        <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                    </state>
+                                    <userDefinedRuntimeAttributes>
+                                        <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                            <real key="value" value="5"/>
+                                        </userDefinedRuntimeAttribute>
+                                    </userDefinedRuntimeAttributes>
+                                </button>
+                            </subviews>
+                            <constraints>
+                                <constraint firstAttribute="trailing" secondItem="OH5-X9-f2G" secondAttribute="trailing" id="JRx-oQ-BJd"/>
+                                <constraint firstAttribute="trailing" secondItem="AuD-kW-STD" secondAttribute="trailing" id="NDe-eO-FMv"/>
+                                <constraint firstAttribute="trailing" secondItem="117-tJ-AOX" secondAttribute="trailing" id="XNh-ls-zrd"/>
+                                <constraint firstItem="OH5-X9-f2G" firstAttribute="leading" secondItem="XBV-b0-5Jx" secondAttribute="leading" id="bHa-A1-591"/>
+                                <constraint firstItem="AuD-kW-STD" firstAttribute="leading" secondItem="XBV-b0-5Jx" secondAttribute="leading" id="kLs-wv-YV8"/>
+                                <constraint firstItem="117-tJ-AOX" firstAttribute="leading" secondItem="XBV-b0-5Jx" secondAttribute="leading" id="xpO-gW-w9b"/>
+                            </constraints>
+                        </stackView>
+                    </subviews>
+                    <color key="backgroundColor" name="card_background_gray"/>
+                    <constraints>
+                        <constraint firstItem="XBV-b0-5Jx" firstAttribute="top" secondItem="ydv-v9-kTh" secondAttribute="top" constant="12" id="9Az-hB-aMS"/>
+                        <constraint firstItem="XBV-b0-5Jx" firstAttribute="leading" secondItem="ydv-v9-kTh" secondAttribute="leading" constant="12" id="UZ1-dY-lDC"/>
+                        <constraint firstAttribute="trailing" secondItem="XBV-b0-5Jx" secondAttribute="trailing" constant="12" id="cCn-un-pMY"/>
+                        <constraint firstAttribute="bottom" secondItem="XBV-b0-5Jx" secondAttribute="bottom" constant="12" id="ipE-8x-1CJ"/>
+                    </constraints>
+                    <userDefinedRuntimeAttributes>
+                        <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                            <real key="value" value="10"/>
+                        </userDefinedRuntimeAttribute>
+                    </userDefinedRuntimeAttributes>
+                </view>
+                <view alpha="0.55000000000000004" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Sxn-6o-a9A" userLabel="Card shadow register" customClass="CardView" customModule="eCommerce_App" customModuleProvider="target">
+                    <rect key="frame" x="24" y="398" width="378" height="223.5"/>
+                    <color key="backgroundColor" name="card_shadow"/>
+                    <userDefinedRuntimeAttributes>
+                        <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                            <real key="value" value="10"/>
+                        </userDefinedRuntimeAttribute>
+                    </userDefinedRuntimeAttributes>
+                </view>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="KaV-bx-ZXp" userLabel="Card title" customClass="CardView" customModule="eCommerce_App" customModuleProvider="target">
+                    <rect key="frame" x="107" y="84" width="200" height="50"/>
+                    <subviews>
+                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Bon Voyage" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Ick-rR-DIu">
+                            <rect key="frame" x="20" y="4" width="160.5" height="50"/>
+                            <constraints>
+                                <constraint firstAttribute="height" constant="50" id="q71-10-JDD"/>
+                            </constraints>
+                            <fontDescription key="fontDescription" name="Rockwell-Bold" family="Rockwell" pointSize="27"/>
+                            <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            <nil key="highlightedColor"/>
+                        </label>
+                    </subviews>
+                    <color key="backgroundColor" name="title_pink"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="50" id="KVX-1U-A4l"/>
+                        <constraint firstItem="Ick-rR-DIu" firstAttribute="centerX" secondItem="KaV-bx-ZXp" secondAttribute="centerX" id="WXq-Na-u4b"/>
+                        <constraint firstAttribute="width" constant="200" id="ZSa-a2-k6d"/>
+                        <constraint firstItem="Ick-rR-DIu" firstAttribute="centerY" secondItem="KaV-bx-ZXp" secondAttribute="centerY" constant="4" id="nnu-Op-YTZ"/>
+                    </constraints>
+                    <userDefinedRuntimeAttributes>
+                        <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                            <real key="value" value="25"/>
+                        </userDefinedRuntimeAttribute>
+                    </userDefinedRuntimeAttributes>
+                </view>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="29V-Ym-0P9" userLabel="Card Register" customClass="CardView" customModule="eCommerce_App" customModuleProvider="target">
+                    <rect key="frame" x="12" y="386" width="378" height="223.5"/>
+                    <subviews>
+                        <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="center" spacing="12" translatesAutoresizingMaskIntoConstraints="NO" id="H9E-e1-ClF">
+                            <rect key="frame" x="12" y="12" width="354" height="199.5"/>
+                            <subviews>
+                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Register" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="mTz-9w-X3o">
+                                    <rect key="frame" x="0.0" y="0.0" width="354" height="14.5"/>
+                                    <fontDescription key="fontDescription" type="system" pointSize="12"/>
+                                    <nil key="textColor"/>
+                                    <nil key="highlightedColor"/>
+                                </label>
+                                <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="email" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="6S8-Jx-hDT">
+                                    <rect key="frame" x="0.0" y="26.5" width="354" height="34"/>
+                                    <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                    <textInputTraits key="textInputTraits"/>
+                                </textField>
+                                <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="password" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="nGn-x2-7bW">
+                                    <rect key="frame" x="0.0" y="72.5" width="354" height="34"/>
+                                    <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                    <textInputTraits key="textInputTraits" secureTextEntry="YES"/>
+                                </textField>
+                                <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="confirm password" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="jEA-Eu-TTo">
+                                    <rect key="frame" x="0.0" y="118.5" width="354" height="34"/>
+                                    <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                    <textInputTraits key="textInputTraits"/>
+                                </textField>
+                                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="LAe-HD-lvw" customClass="RoundedButton" customModule="eCommerce_App" customModuleProvider="target">
+                                    <rect key="frame" x="0.0" y="164.5" width="354" height="35"/>
+                                    <color key="backgroundColor" name="btn_light_pink"/>
+                                    <constraints>
+                                        <constraint firstAttribute="height" constant="35" id="mot-I5-RWf"/>
+                                    </constraints>
+                                    <state key="normal" title="Register">
+                                        <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                    </state>
+                                    <userDefinedRuntimeAttributes>
+                                        <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                            <real key="value" value="5"/>
+                                        </userDefinedRuntimeAttribute>
+                                    </userDefinedRuntimeAttributes>
+                                </button>
+                            </subviews>
+                            <constraints>
+                                <constraint firstItem="6S8-Jx-hDT" firstAttribute="leading" secondItem="H9E-e1-ClF" secondAttribute="leading" id="2Ou-ir-Qyg"/>
+                                <constraint firstAttribute="trailing" secondItem="6S8-Jx-hDT" secondAttribute="trailing" id="3pc-Iv-QgV"/>
+                                <constraint firstItem="jEA-Eu-TTo" firstAttribute="leading" secondItem="H9E-e1-ClF" secondAttribute="leading" id="4iD-pL-1hI"/>
+                                <constraint firstItem="mTz-9w-X3o" firstAttribute="leading" secondItem="H9E-e1-ClF" secondAttribute="leading" id="7hE-FC-NqR"/>
+                                <constraint firstAttribute="trailing" secondItem="nGn-x2-7bW" secondAttribute="trailing" id="LfH-l1-arO"/>
+                                <constraint firstAttribute="trailing" secondItem="LAe-HD-lvw" secondAttribute="trailing" id="Qfd-aP-ZtH"/>
+                                <constraint firstItem="LAe-HD-lvw" firstAttribute="leading" secondItem="H9E-e1-ClF" secondAttribute="leading" id="fnS-dV-Km0"/>
+                                <constraint firstAttribute="trailing" secondItem="jEA-Eu-TTo" secondAttribute="trailing" id="h0a-3d-YuY"/>
+                                <constraint firstItem="nGn-x2-7bW" firstAttribute="leading" secondItem="H9E-e1-ClF" secondAttribute="leading" id="j3F-iW-EVj"/>
+                                <constraint firstAttribute="trailing" secondItem="mTz-9w-X3o" secondAttribute="trailing" id="qgA-2n-vey"/>
+                            </constraints>
+                        </stackView>
+                    </subviews>
+                    <color key="backgroundColor" name="card_background_gray"/>
+                    <constraints>
+                        <constraint firstItem="H9E-e1-ClF" firstAttribute="top" secondItem="29V-Ym-0P9" secondAttribute="top" constant="12" id="6wS-W8-WdH"/>
+                        <constraint firstItem="H9E-e1-ClF" firstAttribute="leading" secondItem="29V-Ym-0P9" secondAttribute="leading" constant="12" id="FdT-ff-SmS"/>
+                        <constraint firstAttribute="bottom" secondItem="H9E-e1-ClF" secondAttribute="bottom" constant="12" id="Ft1-ba-nUc"/>
+                        <constraint firstAttribute="trailing" secondItem="H9E-e1-ClF" secondAttribute="trailing" constant="12" id="ZRX-ap-s5U"/>
+                    </constraints>
+                    <userDefinedRuntimeAttributes>
+                        <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                            <real key="value" value="10"/>
+                        </userDefinedRuntimeAttribute>
+                    </userDefinedRuntimeAttributes>
+                </view>
+                <activityIndicatorView hidden="YES" opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" hidesWhenStopped="YES" style="large" translatesAutoresizingMaskIntoConstraints="NO" id="ZkA-S1-XtO">
+                    <rect key="frame" x="188.5" y="434.5" width="37" height="37"/>
+                    <color key="color" name="btn_dark_blue"/>
+                </activityIndicatorView>
+            </subviews>
+            <viewLayoutGuide key="safeArea" id="fnl-2z-Ty3"/>
+            <color key="backgroundColor" name="btn_light_pink"/>
+            <constraints>
+                <constraint firstItem="W4e-ep-I5I" firstAttribute="centerY" secondItem="ydv-v9-kTh" secondAttribute="centerY" constant="12" id="1qi-dW-tpJ"/>
+                <constraint firstItem="W4e-ep-I5I" firstAttribute="width" secondItem="ydv-v9-kTh" secondAttribute="width" id="2PH-18-B4q"/>
+                <constraint firstItem="ZkA-S1-XtO" firstAttribute="centerY" secondItem="fnl-2z-Ty3" secondAttribute="centerY" id="6RG-Jq-Jaf"/>
+                <constraint firstItem="W4e-ep-I5I" firstAttribute="height" secondItem="ydv-v9-kTh" secondAttribute="height" id="8au-VM-Z6Y"/>
+                <constraint firstItem="KaV-bx-ZXp" firstAttribute="top" secondItem="fnl-2z-Ty3" secondAttribute="top" constant="40" id="DKK-Cc-8YY"/>
+                <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="29V-Ym-0P9" secondAttribute="trailing" constant="24" id="ETQ-hI-snS"/>
+                <constraint firstItem="29V-Ym-0P9" firstAttribute="top" secondItem="W4e-ep-I5I" secondAttribute="bottom" constant="40" id="K71-jq-oeL"/>
+                <constraint firstItem="Sxn-6o-a9A" firstAttribute="width" secondItem="29V-Ym-0P9" secondAttribute="width" id="Rwv-en-KNl"/>
+                <constraint firstItem="29V-Ym-0P9" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" constant="12" id="Uxs-Hm-IYT"/>
+                <constraint firstItem="MrS-OM-BeT" firstAttribute="top" secondItem="i5M-Pr-FkT" secondAttribute="top" id="bDb-pc-QYI"/>
+                <constraint firstItem="Sxn-6o-a9A" firstAttribute="centerX" secondItem="29V-Ym-0P9" secondAttribute="centerX" constant="12" id="cK2-KE-Wo8"/>
+                <constraint firstItem="KaV-bx-ZXp" firstAttribute="centerX" secondItem="i5M-Pr-FkT" secondAttribute="centerX" id="hNQ-kU-psa"/>
+                <constraint firstAttribute="bottom" secondItem="MrS-OM-BeT" secondAttribute="bottom" id="lRk-0p-USv"/>
+                <constraint firstItem="Sxn-6o-a9A" firstAttribute="centerY" secondItem="29V-Ym-0P9" secondAttribute="centerY" constant="12" id="mMk-kd-7Q2"/>
+                <constraint firstItem="ydv-v9-kTh" firstAttribute="top" secondItem="KaV-bx-ZXp" secondAttribute="bottom" constant="20" id="nKo-Zf-61U"/>
+                <constraint firstItem="W4e-ep-I5I" firstAttribute="centerX" secondItem="ydv-v9-kTh" secondAttribute="centerX" constant="12" id="tv0-lt-uYr"/>
+                <constraint firstItem="ydv-v9-kTh" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" constant="12" id="wHL-Hx-qMQ"/>
+                <constraint firstItem="MrS-OM-BeT" firstAttribute="trailing" secondItem="fnl-2z-Ty3" secondAttribute="trailing" id="whp-2m-0mH"/>
+                <constraint firstItem="ZkA-S1-XtO" firstAttribute="centerX" secondItem="fnl-2z-Ty3" secondAttribute="centerX" id="x2Z-Mw-nyq"/>
+                <constraint firstItem="Sxn-6o-a9A" firstAttribute="height" secondItem="29V-Ym-0P9" secondAttribute="height" id="yK2-XW-dzx"/>
+                <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="ydv-v9-kTh" secondAttribute="trailing" constant="24" id="yaK-9f-Wzc"/>
+                <constraint firstItem="MrS-OM-BeT" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" id="zde-D4-FyN"/>
+            </constraints>
+            <point key="canvasLocation" x="18.840579710144929" y="69.642857142857139"/>
+        </view>
+    </objects>
+    <designables>
+        <designable name="AuD-kW-STD">
+            <size key="intrinsicContentSize" width="38" height="30"/>
+        </designable>
+        <designable name="LAe-HD-lvw">
+            <size key="intrinsicContentSize" width="57" height="30"/>
+        </designable>
+    </designables>
+    <resources>
+        <image name="background-beach-filled" width="414" height="896"/>
+        <namedColor name="btn_dark_blue">
+            <color red="0.32941176470588235" green="0.44705882352941179" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+        <namedColor name="btn_light_blue">
+            <color red="0.38039215686274508" green="0.65098039215686276" blue="0.85882352941176465" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+        <namedColor name="btn_light_pink">
+            <color red="0.8901960784313725" green="0.58823529411764708" blue="0.52941176470588236" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+        <namedColor name="card_background_gray">
+            <color red="0.87450980392156863" green="0.87450980392156863" blue="0.8901960784313725" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+        <namedColor name="card_shadow">
+            <color red="0.0" green="0.0" blue="0.0" alpha="0.55000000000000004" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+        <namedColor name="title_pink">
+            <color red="0.81960784313725488" green="0.52549019607843139" blue="0.51372549019607838" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+    </resources>
+</document>
