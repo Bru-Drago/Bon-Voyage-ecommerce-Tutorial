@@ -11,7 +11,11 @@ class HomeVC: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
-        // Do any additional setup after loading the view.
+        
+        let loginVC = LoginRegisterVC()
+        loginVC.modalPresentationStyle = .fullScreen
+        present(loginVC, animated: true)
+        
     }
 
 
@@ -20,6 +24,9 @@ class HomeVC: UIViewController {
         let userSheet = UIAlertController(title:nil , message: nil,preferredStyle:.actionSheet)
         let logout = UIAlertAction(title: "Logout", style: .default) { (action) in
             //Logout
+            let loginVC = LoginRegisterVC()
+            loginVC.modalPresentationStyle = .fullScreen
+            self.present(loginVC, animated: true)
         }
         let manageCards = UIAlertAction(title: "Manage Credit Cards", style: .default) { (action) in
             //Display stripe widget
