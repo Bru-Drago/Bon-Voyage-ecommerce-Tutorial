@@ -15,8 +15,20 @@
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="none" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="F4J-Wy-fU8">
+                                <rect key="frame" x="0.0" y="88" width="414" height="808"/>
+                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            </tableView>
+                        </subviews>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                         <color key="backgroundColor" name="bg_light_blue"/>
+                        <constraints>
+                            <constraint firstItem="F4J-Wy-fU8" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="7t5-DC-AIa"/>
+                            <constraint firstItem="F4J-Wy-fU8" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" id="Ht9-mG-R56"/>
+                            <constraint firstAttribute="bottom" secondItem="F4J-Wy-fU8" secondAttribute="bottom" id="lvq-s3-V63"/>
+                            <constraint firstItem="F4J-Wy-fU8" firstAttribute="trailing" secondItem="6Tk-OE-BBY" secondAttribute="trailing" id="rZ7-i8-YvN"/>
+                        </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="Uaq-lv-SQO">
                         <barButtonItem key="rightBarButtonItem" title="Item" image="person.fill" catalog="system" id="wgH-Vl-Vxw">
@@ -26,6 +38,9 @@
                             </connections>
                         </barButtonItem>
                     </navigationItem>
+                    <connections>
+                        <outlet property="tableView" destination="F4J-Wy-fU8" id="hpt-A7-348"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
