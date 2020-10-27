@@ -12,6 +12,7 @@ class HomeVC: UIViewController {
     @IBOutlet weak var tableView:UITableView!
     
     var vacations = [Vacation]()
+    var vacationSelected : Vacation?
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -76,6 +77,14 @@ extension HomeVC : UITableViewDelegate , UITableViewDataSource{
         return 220
         
     }
-    
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        vacationSelected = vacations[indexPath.row]
+        performSegue(withIdentifier: K.Segue.detailSegue, sender: self)
+        
+    }
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        guard let destination = segue.destination as? VacationDetailsVC else { return}
+        destination.vacation = vacationSelected
+        }
     
 }

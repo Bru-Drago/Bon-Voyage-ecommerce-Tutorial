@@ -24,6 +24,8 @@
 		F5A7EF3A25475A7900F0F907 /* VacationCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = F5A7EF3825475A7900F0F907 /* VacationCell.xib */; };
 		F5A7EF3E25475FDD00F0F907 /* SDWebImage in Frameworks */ = {isa = PBXBuildFile; productRef = F5A7EF3D25475FDD00F0F907 /* SDWebImage */; };
 		F5A7EF432547660C00F0F907 /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = F5A7EF422547660C00F0F907 /* Constants.swift */; };
+		F5A7EF472548526100F0F907 /* Int+Ext.swift in Sources */ = {isa = PBXBuildFile; fileRef = F5A7EF462548526100F0F907 /* Int+Ext.swift */; };
+		F5A7EF4A2548560F00F0F907 /* VacationDetailsVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = F5A7EF492548560F00F0F907 /* VacationDetailsVC.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -45,6 +47,8 @@
 		F5A7EF3725475A7900F0F907 /* VacationCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VacationCell.swift; sourceTree = "<group>"; };
 		F5A7EF3825475A7900F0F907 /* VacationCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = VacationCell.xib; sourceTree = "<group>"; };
 		F5A7EF422547660C00F0F907 /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
+		F5A7EF462548526100F0F907 /* Int+Ext.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Int+Ext.swift"; sourceTree = "<group>"; };
+		F5A7EF492548560F00F0F907 /* VacationDetailsVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VacationDetailsVC.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -78,6 +82,7 @@
 		F596D4942544B9BA0079A51F /* eCommerce App */ = {
 			isa = PBXGroup;
 			children = (
+				F5A7EF452548523B00F0F907 /* Extensions */,
 				F5A7EF402547648400F0F907 /* UIHelper */,
 				F5A7EF3625475A5100F0F907 /* Cells */,
 				F5A7EF3225474B1000F0F907 /* Models */,
@@ -85,6 +90,7 @@
 				F596D49B2544B9BA0079A51F /* Main.storyboard */,
 				F596D4B72544BE770079A51F /* DemoData.swift */,
 				F596D4992544B9BA0079A51F /* HomeVC.swift */,
+				F5A7EF492548560F00F0F907 /* VacationDetailsVC.swift */,
 				F596D4AF2544BDEF0079A51F /* Custom Views */,
 				F596D4AA2544BAAB0079A51F /* Resources */,
 			);
@@ -145,6 +151,14 @@
 				F5A7EF422547660C00F0F907 /* Constants.swift */,
 			);
 			path = UIHelper;
+			sourceTree = "<group>";
+		};
+		F5A7EF452548523B00F0F907 /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				F5A7EF462548526100F0F907 /* Int+Ext.swift */,
+			);
+			path = Extensions;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -234,8 +248,10 @@
 				F596D4B32544BE060079A51F /* ShadowCardView.swift in Sources */,
 				F5A7EF3925475A7900F0F907 /* VacationCell.swift in Sources */,
 				F596D4982544B9BA0079A51F /* SceneDelegate.swift in Sources */,
+				F5A7EF4A2548560F00F0F907 /* VacationDetailsVC.swift in Sources */,
 				F596D4B42544BE060079A51F /* CardView.swift in Sources */,
 				F596D4BD2544C6BC0079A51F /* LoginRegisterVC.swift in Sources */,
+				F5A7EF472548526100F0F907 /* Int+Ext.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

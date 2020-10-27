@@ -5,6 +5,7 @@
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="17126"/>
         <capability name="Named colors" minToolsVersion="9.0"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
@@ -40,11 +41,192 @@
                     </navigationItem>
                     <connections>
                         <outlet property="tableView" destination="F4J-Wy-fU8" id="hpt-A7-348"/>
+                        <segue destination="jLq-FX-HbR" kind="show" identifier="ToVacationDetails" id="Ihf-zx-CqJ"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="1047.8260869565217" y="118.52678571428571"/>
+        </scene>
+        <!--Vacation DetailsVC-->
+        <scene sceneID="ODf-u5-OEB">
+            <objects>
+                <viewController id="jLq-FX-HbR" customClass="VacationDetailsVC" customModule="eCommerce_App" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="bk9-CY-tHp">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="2000"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="fKf-cy-6MY">
+                                <rect key="frame" x="0.0" y="88" width="414" height="1912"/>
+                                <subviews>
+                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="kkU-i1-4gx">
+                                        <rect key="frame" x="0.0" y="0.0" width="414" height="684"/>
+                                        <subviews>
+                                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="12" translatesAutoresizingMaskIntoConstraints="NO" id="CeV-u6-lv4">
+                                                <rect key="frame" x="12" y="12" width="390" height="660"/>
+                                                <subviews>
+                                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="TKw-dZ-37a" userLabel="Gallery Card" customClass="ShadowCardView" customModule="eCommerce_App" customModuleProvider="target">
+                                                        <rect key="frame" x="0.0" y="0.0" width="390" height="200"/>
+                                                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                                        <constraints>
+                                                            <constraint firstAttribute="height" constant="200" id="Zf1-47-K1M"/>
+                                                        </constraints>
+                                                        <userDefinedRuntimeAttributes>
+                                                            <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                                                <real key="value" value="10"/>
+                                                            </userDefinedRuntimeAttribute>
+                                                        </userDefinedRuntimeAttributes>
+                                                    </view>
+                                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="tm3-hL-tIR" userLabel="Details Card" customClass="ShadowCardView" customModule="eCommerce_App" customModuleProvider="target">
+                                                        <rect key="frame" x="0.0" y="212" width="390" height="200"/>
+                                                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                                        <constraints>
+                                                            <constraint firstAttribute="height" constant="200" id="0s1-0N-RK6"/>
+                                                        </constraints>
+                                                        <userDefinedRuntimeAttributes>
+                                                            <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                                                <real key="value" value="10"/>
+                                                            </userDefinedRuntimeAttribute>
+                                                        </userDefinedRuntimeAttributes>
+                                                    </view>
+                                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="tLs-fd-6tM" userLabel="Highlights Card" customClass="ShadowCardView" customModule="eCommerce_App" customModuleProvider="target">
+                                                        <rect key="frame" x="0.0" y="424" width="390" height="81"/>
+                                                        <subviews>
+                                                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="4" translatesAutoresizingMaskIntoConstraints="NO" id="JMb-FU-q7g">
+                                                                <rect key="frame" x="12" y="12" width="366" height="57"/>
+                                                                <subviews>
+                                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="HighLights" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="aNJ-8D-qO9">
+                                                                        <rect key="frame" x="0.0" y="0.0" width="366" height="33.5"/>
+                                                                        <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="17"/>
+                                                                        <nil key="textColor"/>
+                                                                        <nil key="highlightedColor"/>
+                                                                    </label>
+                                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Description" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="nzc-TC-XLK">
+                                                                        <rect key="frame" x="0.0" y="37.5" width="366" height="19.5"/>
+                                                                        <fontDescription key="fontDescription" type="system" pointSize="16"/>
+                                                                        <nil key="textColor"/>
+                                                                        <nil key="highlightedColor"/>
+                                                                    </label>
+                                                                </subviews>
+                                                            </stackView>
+                                                        </subviews>
+                                                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                                        <constraints>
+                                                            <constraint firstItem="JMb-FU-q7g" firstAttribute="leading" secondItem="tLs-fd-6tM" secondAttribute="leading" constant="12" id="DqF-f9-bMD"/>
+                                                            <constraint firstItem="JMb-FU-q7g" firstAttribute="top" secondItem="tLs-fd-6tM" secondAttribute="top" constant="12" id="acs-6o-NZk"/>
+                                                            <constraint firstAttribute="bottom" secondItem="JMb-FU-q7g" secondAttribute="bottom" constant="12" id="m0s-d1-hZT"/>
+                                                            <constraint firstAttribute="trailing" secondItem="JMb-FU-q7g" secondAttribute="trailing" constant="12" id="uN3-kD-Z3b"/>
+                                                        </constraints>
+                                                        <userDefinedRuntimeAttributes>
+                                                            <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                                                <real key="value" value="10"/>
+                                                            </userDefinedRuntimeAttribute>
+                                                        </userDefinedRuntimeAttributes>
+                                                    </view>
+                                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="fKa-iA-dCo" userLabel="Activities Card" customClass="ShadowCardView" customModule="eCommerce_App" customModuleProvider="target">
+                                                        <rect key="frame" x="0.0" y="517" width="390" height="81"/>
+                                                        <subviews>
+                                                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="4" translatesAutoresizingMaskIntoConstraints="NO" id="3Fk-yS-QGj">
+                                                                <rect key="frame" x="12" y="12" width="366" height="57"/>
+                                                                <subviews>
+                                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Leisure and Recreation" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="S5k-rs-Pyq">
+                                                                        <rect key="frame" x="0.0" y="0.0" width="366" height="33.5"/>
+                                                                        <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="17"/>
+                                                                        <nil key="textColor"/>
+                                                                        <nil key="highlightedColor"/>
+                                                                    </label>
+                                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Activities" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="9Ld-nP-E7I">
+                                                                        <rect key="frame" x="0.0" y="37.5" width="366" height="19.5"/>
+                                                                        <fontDescription key="fontDescription" type="system" pointSize="16"/>
+                                                                        <nil key="textColor"/>
+                                                                        <nil key="highlightedColor"/>
+                                                                    </label>
+                                                                </subviews>
+                                                            </stackView>
+                                                        </subviews>
+                                                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                                        <constraints>
+                                                            <constraint firstItem="3Fk-yS-QGj" firstAttribute="top" secondItem="fKa-iA-dCo" secondAttribute="top" constant="12" id="BY6-cV-eci"/>
+                                                            <constraint firstItem="3Fk-yS-QGj" firstAttribute="leading" secondItem="fKa-iA-dCo" secondAttribute="leading" constant="12" id="R4g-0y-jhQ"/>
+                                                            <constraint firstAttribute="trailing" secondItem="3Fk-yS-QGj" secondAttribute="trailing" constant="12" id="bal-vU-pB5"/>
+                                                            <constraint firstAttribute="bottom" secondItem="3Fk-yS-QGj" secondAttribute="bottom" constant="12" id="fP5-v3-N3F"/>
+                                                        </constraints>
+                                                        <userDefinedRuntimeAttributes>
+                                                            <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                                                <real key="value" value="10"/>
+                                                            </userDefinedRuntimeAttribute>
+                                                        </userDefinedRuntimeAttributes>
+                                                    </view>
+                                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="jOg-uL-QOj" customClass="RoundedButton" customModule="eCommerce_App" customModuleProvider="target">
+                                                        <rect key="frame" x="0.0" y="610" width="390" height="50"/>
+                                                        <color key="backgroundColor" name="btn_dark_blue"/>
+                                                        <constraints>
+                                                            <constraint firstAttribute="height" constant="50" id="RAx-fH-iUV"/>
+                                                        </constraints>
+                                                        <fontDescription key="fontDescription" type="boldSystem" pointSize="17"/>
+                                                        <state key="normal" title="Book it!">
+                                                            <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                        </state>
+                                                        <userDefinedRuntimeAttributes>
+                                                            <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                                                <real key="value" value="5"/>
+                                                            </userDefinedRuntimeAttribute>
+                                                        </userDefinedRuntimeAttributes>
+                                                    </button>
+                                                </subviews>
+                                                <constraints>
+                                                    <constraint firstItem="TKw-dZ-37a" firstAttribute="top" secondItem="CeV-u6-lv4" secondAttribute="top" id="2jN-ds-1cE"/>
+                                                    <constraint firstAttribute="trailing" secondItem="tm3-hL-tIR" secondAttribute="trailing" id="MVA-Oo-pBt"/>
+                                                    <constraint firstItem="jOg-uL-QOj" firstAttribute="leading" secondItem="CeV-u6-lv4" secondAttribute="leading" id="QHM-u6-UKS"/>
+                                                    <constraint firstItem="tm3-hL-tIR" firstAttribute="leading" secondItem="CeV-u6-lv4" secondAttribute="leading" id="S48-o1-tCx"/>
+                                                    <constraint firstItem="TKw-dZ-37a" firstAttribute="leading" secondItem="CeV-u6-lv4" secondAttribute="leading" id="WcR-cl-bRv"/>
+                                                    <constraint firstAttribute="trailing" secondItem="tLs-fd-6tM" secondAttribute="trailing" id="hbE-lY-P5P"/>
+                                                    <constraint firstItem="tLs-fd-6tM" firstAttribute="leading" secondItem="CeV-u6-lv4" secondAttribute="leading" id="nNY-kC-leJ"/>
+                                                    <constraint firstAttribute="trailing" secondItem="TKw-dZ-37a" secondAttribute="trailing" id="o6g-PW-ese"/>
+                                                    <constraint firstAttribute="trailing" secondItem="jOg-uL-QOj" secondAttribute="trailing" id="t8C-jq-qRD"/>
+                                                </constraints>
+                                            </stackView>
+                                        </subviews>
+                                        <color key="backgroundColor" name="bg_light_blue"/>
+                                        <constraints>
+                                            <constraint firstAttribute="trailing" secondItem="CeV-u6-lv4" secondAttribute="trailing" constant="12" id="8xs-Hy-WpS"/>
+                                            <constraint firstAttribute="bottom" secondItem="CeV-u6-lv4" secondAttribute="bottom" constant="12" id="ALW-Xr-TG6"/>
+                                            <constraint firstItem="CeV-u6-lv4" firstAttribute="leading" secondItem="kkU-i1-4gx" secondAttribute="leading" constant="12" id="nbl-uS-Ek9"/>
+                                            <constraint firstItem="CeV-u6-lv4" firstAttribute="top" secondItem="kkU-i1-4gx" secondAttribute="top" constant="12" id="nkJ-1K-UY9"/>
+                                        </constraints>
+                                    </view>
+                                </subviews>
+                                <constraints>
+                                    <constraint firstItem="kkU-i1-4gx" firstAttribute="width" secondItem="hZ0-0I-oHY" secondAttribute="width" id="9d2-rF-WuP"/>
+                                    <constraint firstItem="kkU-i1-4gx" firstAttribute="top" secondItem="588-UM-bmR" secondAttribute="top" id="N36-Y6-Jg0"/>
+                                    <constraint firstItem="kkU-i1-4gx" firstAttribute="trailing" secondItem="588-UM-bmR" secondAttribute="trailing" id="Rvw-Uc-oly"/>
+                                    <constraint firstItem="kkU-i1-4gx" firstAttribute="leading" secondItem="588-UM-bmR" secondAttribute="leading" id="tJX-ls-0Tk"/>
+                                    <constraint firstItem="kkU-i1-4gx" firstAttribute="bottom" secondItem="588-UM-bmR" secondAttribute="bottom" id="x0w-Vh-KzB"/>
+                                </constraints>
+                                <viewLayoutGuide key="contentLayoutGuide" id="588-UM-bmR"/>
+                                <viewLayoutGuide key="frameLayoutGuide" id="hZ0-0I-oHY"/>
+                            </scrollView>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="cnU-TY-0OO"/>
+                        <color key="backgroundColor" name="bg_light_blue"/>
+                        <constraints>
+                            <constraint firstItem="fKf-cy-6MY" firstAttribute="trailing" secondItem="cnU-TY-0OO" secondAttribute="trailing" id="IaW-0B-Jnc"/>
+                            <constraint firstAttribute="bottom" secondItem="fKf-cy-6MY" secondAttribute="bottom" id="ZaX-Lv-RRN"/>
+                            <constraint firstItem="fKf-cy-6MY" firstAttribute="top" secondItem="cnU-TY-0OO" secondAttribute="top" id="ftl-j0-gMI"/>
+                            <constraint firstItem="fKf-cy-6MY" firstAttribute="leading" secondItem="cnU-TY-0OO" secondAttribute="leading" id="gdj-yx-25e"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" id="Neh-sB-BKw"/>
+                    <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
+                    <size key="freeformSize" width="414" height="2000"/>
+                    <connections>
+                        <outlet property="activitiesLbl" destination="9Ld-nP-E7I" id="4ad-ve-1sP"/>
+                        <outlet property="descriptionLbl" destination="nzc-TC-XLK" id="x4c-jX-Eti"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="63Y-kn-new" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1744.9275362318842" y="118.52678571428571"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="eLO-x2-jXx">
@@ -65,13 +247,24 @@
             <point key="canvasLocation" x="137.68115942028987" y="118.52678571428571"/>
         </scene>
     </scenes>
+    <designables>
+        <designable name="jOg-uL-QOj">
+            <size key="intrinsicContentSize" width="62" height="33"/>
+        </designable>
+    </designables>
     <resources>
         <image name="person.fill" catalog="system" width="128" height="120"/>
         <namedColor name="bg_light_blue">
             <color red="0.78823529411764703" green="0.83921568627450982" blue="0.96862745098039216" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </namedColor>
+        <namedColor name="btn_dark_blue">
+            <color red="0.32941176470588235" green="0.44705882352941179" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
         <namedColor name="btn_light_blue">
             <color red="0.38039215686274508" green="0.65098039215686276" blue="0.85882352941176465" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </namedColor>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
     </resources>
 </document>
