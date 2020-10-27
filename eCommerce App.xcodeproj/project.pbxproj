@@ -26,6 +26,7 @@
 		F5A7EF432547660C00F0F907 /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = F5A7EF422547660C00F0F907 /* Constants.swift */; };
 		F5A7EF472548526100F0F907 /* Int+Ext.swift in Sources */ = {isa = PBXBuildFile; fileRef = F5A7EF462548526100F0F907 /* Int+Ext.swift */; };
 		F5A7EF4A2548560F00F0F907 /* VacationDetailsVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = F5A7EF492548560F00F0F907 /* VacationDetailsVC.swift */; };
+		F5A7EF4F2548A83600F0F907 /* ThumbnailCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = F5A7EF4E2548A83500F0F907 /* ThumbnailCell.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -49,6 +50,7 @@
 		F5A7EF422547660C00F0F907 /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
 		F5A7EF462548526100F0F907 /* Int+Ext.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Int+Ext.swift"; sourceTree = "<group>"; };
 		F5A7EF492548560F00F0F907 /* VacationDetailsVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VacationDetailsVC.swift; sourceTree = "<group>"; };
+		F5A7EF4E2548A83500F0F907 /* ThumbnailCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ThumbnailCell.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -141,6 +143,7 @@
 			children = (
 				F5A7EF3725475A7900F0F907 /* VacationCell.swift */,
 				F5A7EF3825475A7900F0F907 /* VacationCell.xib */,
+				F5A7EF4E2548A83500F0F907 /* ThumbnailCell.swift */,
 			);
 			path = Cells;
 			sourceTree = "<group>";
@@ -241,6 +244,7 @@
 			files = (
 				F596D49A2544B9BA0079A51F /* HomeVC.swift in Sources */,
 				F5A7EF432547660C00F0F907 /* Constants.swift in Sources */,
+				F5A7EF4F2548A83600F0F907 /* ThumbnailCell.swift in Sources */,
 				F596D4B52544BE060079A51F /* RoundedButton.swift in Sources */,
 				F5A7EF3425474B2B00F0F907 /* Vacation.swift in Sources */,
 				F596D4B82544BE770079A51F /* DemoData.swift in Sources */,

@@ -6,6 +6,7 @@
         <capability name="Named colors" minToolsVersion="9.0"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="collection view cell content view" minToolsVersion="11.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
@@ -60,16 +61,67 @@
                                 <rect key="frame" x="0.0" y="88" width="414" height="1912"/>
                                 <subviews>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="kkU-i1-4gx">
-                                        <rect key="frame" x="0.0" y="0.0" width="414" height="684"/>
+                                        <rect key="frame" x="0.0" y="0.0" width="414" height="825"/>
                                         <subviews>
                                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="12" translatesAutoresizingMaskIntoConstraints="NO" id="CeV-u6-lv4">
-                                                <rect key="frame" x="12" y="12" width="390" height="660"/>
+                                                <rect key="frame" x="12" y="12" width="390" height="801"/>
                                                 <subviews>
                                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="TKw-dZ-37a" userLabel="Gallery Card" customClass="ShadowCardView" customModule="eCommerce_App" customModuleProvider="target">
-                                                        <rect key="frame" x="0.0" y="0.0" width="390" height="200"/>
+                                                        <rect key="frame" x="0.0" y="0.0" width="390" height="400"/>
+                                                        <subviews>
+                                                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="c0U-Qx-mK7">
+                                                                <rect key="frame" x="8" y="8" width="374" height="200"/>
+                                                                <constraints>
+                                                                    <constraint firstAttribute="height" constant="200" id="VaM-HE-5cu"/>
+                                                                </constraints>
+                                                            </imageView>
+                                                            <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="a66-4W-Tzp">
+                                                                <rect key="frame" x="8" y="242" width="374" height="150"/>
+                                                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                                                <constraints>
+                                                                    <constraint firstAttribute="height" constant="150" id="l5i-BK-X0u"/>
+                                                                </constraints>
+                                                                <collectionViewFlowLayout key="collectionViewLayout" scrollDirection="horizontal" minimumLineSpacing="10" minimumInteritemSpacing="10" id="774-k4-9KZ">
+                                                                    <size key="itemSize" width="128" height="128"/>
+                                                                    <size key="headerReferenceSize" width="0.0" height="0.0"/>
+                                                                    <size key="footerReferenceSize" width="0.0" height="0.0"/>
+                                                                    <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
+                                                                </collectionViewFlowLayout>
+                                                                <cells>
+                                                                    <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="ThumbnailCell" id="Pbb-9S-TUQ" customClass="ThumbnailCell" customModule="eCommerce_App" customModuleProvider="target">
+                                                                        <rect key="frame" x="0.0" y="11" width="128" height="128"/>
+                                                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                                        <collectionViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" id="TdO-Tr-aCl">
+                                                                            <rect key="frame" x="0.0" y="0.0" width="128" height="128"/>
+                                                                            <autoresizingMask key="autoresizingMask"/>
+                                                                            <subviews>
+                                                                                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="UrV-61-vey">
+                                                                                    <rect key="frame" x="0.0" y="0.0" width="128" height="128"/>
+                                                                                </imageView>
+                                                                            </subviews>
+                                                                            <constraints>
+                                                                                <constraint firstAttribute="bottom" secondItem="UrV-61-vey" secondAttribute="bottom" id="DOY-g5-Pik"/>
+                                                                                <constraint firstItem="UrV-61-vey" firstAttribute="top" secondItem="TdO-Tr-aCl" secondAttribute="top" id="IhI-cd-xrd"/>
+                                                                                <constraint firstAttribute="trailing" secondItem="UrV-61-vey" secondAttribute="trailing" id="VrY-c1-Hmd"/>
+                                                                                <constraint firstItem="UrV-61-vey" firstAttribute="leading" secondItem="TdO-Tr-aCl" secondAttribute="leading" id="k1e-A3-nap"/>
+                                                                            </constraints>
+                                                                        </collectionViewCellContentView>
+                                                                        <connections>
+                                                                            <outlet property="thumbnailImage" destination="UrV-61-vey" id="Gq4-o2-GK4"/>
+                                                                        </connections>
+                                                                    </collectionViewCell>
+                                                                </cells>
+                                                            </collectionView>
+                                                        </subviews>
                                                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                                                         <constraints>
-                                                            <constraint firstAttribute="height" constant="200" id="Zf1-47-K1M"/>
+                                                            <constraint firstAttribute="trailing" secondItem="c0U-Qx-mK7" secondAttribute="trailing" constant="8" id="30g-r4-jg3"/>
+                                                            <constraint firstItem="c0U-Qx-mK7" firstAttribute="top" secondItem="TKw-dZ-37a" secondAttribute="top" constant="8" id="Dma-0g-Eto"/>
+                                                            <constraint firstAttribute="trailing" secondItem="a66-4W-Tzp" secondAttribute="trailing" constant="8" id="Hqe-1q-n5u"/>
+                                                            <constraint firstAttribute="bottom" secondItem="a66-4W-Tzp" secondAttribute="bottom" constant="8" id="OC4-5i-j4b"/>
+                                                            <constraint firstItem="c0U-Qx-mK7" firstAttribute="leading" secondItem="TKw-dZ-37a" secondAttribute="leading" constant="8" id="QTJ-Cd-8CP"/>
+                                                            <constraint firstAttribute="height" constant="400" id="Zf1-47-K1M"/>
+                                                            <constraint firstItem="a66-4W-Tzp" firstAttribute="leading" secondItem="TKw-dZ-37a" secondAttribute="leading" constant="8" id="jSb-DD-Q25"/>
                                                         </constraints>
                                                         <userDefinedRuntimeAttributes>
                                                             <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
@@ -78,10 +130,80 @@
                                                         </userDefinedRuntimeAttributes>
                                                     </view>
                                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="tm3-hL-tIR" userLabel="Details Card" customClass="ShadowCardView" customModule="eCommerce_App" customModuleProvider="target">
-                                                        <rect key="frame" x="0.0" y="212" width="390" height="200"/>
+                                                        <rect key="frame" x="0.0" y="412" width="390" height="141"/>
+                                                        <subviews>
+                                                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="top" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="rth-YJ-A5X">
+                                                                <rect key="frame" x="8" y="8" width="374" height="125"/>
+                                                                <subviews>
+                                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Details" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="HGc-4z-ZD4">
+                                                                        <rect key="frame" x="0.0" y="0.0" width="55" height="26"/>
+                                                                        <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="17"/>
+                                                                        <nil key="textColor"/>
+                                                                        <nil key="highlightedColor"/>
+                                                                    </label>
+                                                                    <stackView opaque="NO" contentMode="scaleToFill" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="xhl-d6-Ku5">
+                                                                        <rect key="frame" x="0.0" y="34" width="138.5" height="25"/>
+                                                                        <subviews>
+                                                                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="plane" translatesAutoresizingMaskIntoConstraints="NO" id="Trv-0s-Z5m">
+                                                                                <rect key="frame" x="0.0" y="0.0" width="25" height="25"/>
+                                                                                <constraints>
+                                                                                    <constraint firstAttribute="height" constant="25" id="4dT-fJ-X02"/>
+                                                                                    <constraint firstAttribute="width" constant="25" id="aW7-17-fv6"/>
+                                                                                </constraints>
+                                                                            </imageView>
+                                                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Departs from:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="vy7-p2-3JA">
+                                                                                <rect key="frame" x="33" y="0.0" width="105.5" height="25"/>
+                                                                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                                                <nil key="textColor"/>
+                                                                                <nil key="highlightedColor"/>
+                                                                            </label>
+                                                                        </subviews>
+                                                                    </stackView>
+                                                                    <stackView opaque="NO" contentMode="scaleToFill" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="hfQ-Qh-ptU">
+                                                                        <rect key="frame" x="0.0" y="67" width="170" height="25"/>
+                                                                        <subviews>
+                                                                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="bed" translatesAutoresizingMaskIntoConstraints="NO" id="UQE-Ny-Vnf">
+                                                                                <rect key="frame" x="0.0" y="0.0" width="25" height="25"/>
+                                                                                <constraints>
+                                                                                    <constraint firstAttribute="height" constant="25" id="Cul-aL-lJV"/>
+                                                                                    <constraint firstAttribute="width" constant="25" id="qCY-If-tzw"/>
+                                                                                </constraints>
+                                                                            </imageView>
+                                                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Number of nights:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="XFH-xl-55l">
+                                                                                <rect key="frame" x="33" y="0.0" width="137" height="25"/>
+                                                                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                                                <nil key="textColor"/>
+                                                                                <nil key="highlightedColor"/>
+                                                                            </label>
+                                                                        </subviews>
+                                                                    </stackView>
+                                                                    <stackView opaque="NO" contentMode="scaleToFill" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="E7W-xU-ySE">
+                                                                        <rect key="frame" x="0.0" y="100" width="169" height="25"/>
+                                                                        <subviews>
+                                                                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="money" translatesAutoresizingMaskIntoConstraints="NO" id="UIU-6s-SId">
+                                                                                <rect key="frame" x="0.0" y="0.0" width="25" height="25"/>
+                                                                                <constraints>
+                                                                                    <constraint firstAttribute="height" constant="25" id="5Uj-qa-ED0"/>
+                                                                                    <constraint firstAttribute="width" constant="25" id="8nG-4z-R47"/>
+                                                                                </constraints>
+                                                                            </imageView>
+                                                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="All inclusive price:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="yo4-Cm-jgl">
+                                                                                <rect key="frame" x="33" y="0.0" width="136" height="25"/>
+                                                                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                                                <nil key="textColor"/>
+                                                                                <nil key="highlightedColor"/>
+                                                                            </label>
+                                                                        </subviews>
+                                                                    </stackView>
+                                                                </subviews>
+                                                            </stackView>
+                                                        </subviews>
                                                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                                                         <constraints>
-                                                            <constraint firstAttribute="height" constant="200" id="0s1-0N-RK6"/>
+                                                            <constraint firstAttribute="trailing" secondItem="rth-YJ-A5X" secondAttribute="trailing" constant="8" id="4Ql-ss-a4k"/>
+                                                            <constraint firstAttribute="bottom" secondItem="rth-YJ-A5X" secondAttribute="bottom" constant="8" id="SPD-Pc-DPA"/>
+                                                            <constraint firstItem="rth-YJ-A5X" firstAttribute="top" secondItem="tm3-hL-tIR" secondAttribute="top" constant="8" id="gYx-vM-7HK"/>
+                                                            <constraint firstItem="rth-YJ-A5X" firstAttribute="leading" secondItem="tm3-hL-tIR" secondAttribute="leading" constant="8" id="rkD-a4-b8Q"/>
                                                         </constraints>
                                                         <userDefinedRuntimeAttributes>
                                                             <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
@@ -90,7 +212,7 @@
                                                         </userDefinedRuntimeAttributes>
                                                     </view>
                                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="tLs-fd-6tM" userLabel="Highlights Card" customClass="ShadowCardView" customModule="eCommerce_App" customModuleProvider="target">
-                                                        <rect key="frame" x="0.0" y="424" width="390" height="81"/>
+                                                        <rect key="frame" x="0.0" y="565" width="390" height="81"/>
                                                         <subviews>
                                                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="4" translatesAutoresizingMaskIntoConstraints="NO" id="JMb-FU-q7g">
                                                                 <rect key="frame" x="12" y="12" width="366" height="57"/>
@@ -124,7 +246,7 @@
                                                         </userDefinedRuntimeAttributes>
                                                     </view>
                                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="fKa-iA-dCo" userLabel="Activities Card" customClass="ShadowCardView" customModule="eCommerce_App" customModuleProvider="target">
-                                                        <rect key="frame" x="0.0" y="517" width="390" height="81"/>
+                                                        <rect key="frame" x="0.0" y="658" width="390" height="81"/>
                                                         <subviews>
                                                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="4" translatesAutoresizingMaskIntoConstraints="NO" id="3Fk-yS-QGj">
                                                                 <rect key="frame" x="12" y="12" width="366" height="57"/>
@@ -158,7 +280,7 @@
                                                         </userDefinedRuntimeAttributes>
                                                     </view>
                                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="jOg-uL-QOj" customClass="RoundedButton" customModule="eCommerce_App" customModuleProvider="target">
-                                                        <rect key="frame" x="0.0" y="610" width="390" height="50"/>
+                                                        <rect key="frame" x="0.0" y="751" width="390" height="50"/>
                                                         <color key="backgroundColor" name="btn_dark_blue"/>
                                                         <constraints>
                                                             <constraint firstAttribute="height" constant="50" id="RAx-fH-iUV"/>
@@ -221,7 +343,12 @@
                     <size key="freeformSize" width="414" height="2000"/>
                     <connections>
                         <outlet property="activitiesLbl" destination="9Ld-nP-E7I" id="4ad-ve-1sP"/>
+                        <outlet property="collectionView" destination="a66-4W-Tzp" id="k0E-w9-HyE"/>
+                        <outlet property="departFromLbl" destination="vy7-p2-3JA" id="Cd0-o1-htv"/>
                         <outlet property="descriptionLbl" destination="nzc-TC-XLK" id="x4c-jX-Eti"/>
+                        <outlet property="mainImage" destination="c0U-Qx-mK7" id="yyU-Ty-afN"/>
+                        <outlet property="numberOfNightsLbl" destination="XFH-xl-55l" id="bj9-ak-NoO"/>
+                        <outlet property="priceLbl" destination="yo4-Cm-jgl" id="WvO-np-arB"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="63Y-kn-new" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
@@ -253,7 +380,10 @@
         </designable>
     </designables>
     <resources>
+        <image name="bed" width="77" height="58"/>
+        <image name="money" width="75" height="75"/>
         <image name="person.fill" catalog="system" width="128" height="120"/>
+        <image name="plane" width="60" height="60"/>
         <namedColor name="bg_light_blue">
             <color red="0.78823529411764703" green="0.83921568627450982" blue="0.96862745098039216" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </namedColor>

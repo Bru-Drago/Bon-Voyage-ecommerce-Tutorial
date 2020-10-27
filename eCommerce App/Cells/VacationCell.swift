@@ -29,8 +29,10 @@ class VacationCell: UITableViewCell {
         let imageURL = vacation.images[0]
         if let url = URL(string: imageURL){
             mainImage.sd_imageIndicator = SDWebImageActivityIndicator.medium
-            mainImage.sd_setImage(with: url, placeholderImage: UIImage(named: "background-beach-alpha"))
+            mainImage.sd_setImage(with: url, placeholderImage:K.imgPlaceholder )
         }
     }
     
 }
+
+//UIImage(named: K.imgPlaceholderString)
