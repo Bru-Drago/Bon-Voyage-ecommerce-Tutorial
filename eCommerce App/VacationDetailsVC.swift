@@ -10,7 +10,7 @@ import SDWebImage
 
 
 class VacationDetailsVC: UIViewController {
-
+    
     @IBOutlet weak var activitiesLbl:UILabel!
     @IBOutlet weak var descriptionLbl:UILabel!
     @IBOutlet weak var departFromLbl:UILabel!
@@ -43,8 +43,8 @@ class VacationDetailsVC: UIViewController {
         
     }
     
-
-
+    
+    
 }
 extension VacationDetailsVC : UICollectionViewDelegate , UICollectionViewDataSource , UICollectionViewDelegateFlowLayout {
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
@@ -64,13 +64,13 @@ extension VacationDetailsVC : UICollectionViewDelegate , UICollectionViewDataSou
         if let url = URL(string: imageURL){
             mainImage.sd_imageIndicator = SDWebImageActivityIndicator.medium
             mainImage.sd_setImage(with: url, placeholderImage: UIImage(named: "background-beach-alpha"))
-    }
-    
-    func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
+        }
         
-        return CGSize(width: 120, height: 120)
+        func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
+            
+            return CGSize(width: 120, height: 120)
+        }
+        
+        
     }
-    
-    
-}
 }
